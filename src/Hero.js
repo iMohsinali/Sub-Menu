@@ -18,7 +18,7 @@ const Hero = () => {
           <button className='btn'>Start now</button>
         </article>
         <article className='hero-image'>
-          <img src={phoneImg} className='photo-img' alt='phone' />
+          <img src={phoneImg} className='phone-img' alt='phone' />
         </article>
       </div>
     </section>

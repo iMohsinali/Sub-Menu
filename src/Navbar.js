@@ -4,6 +4,16 @@ import { FaBars } from 'react-icons/fa'
 import { useGlobalContext } from './context'
 const Navbar = () => {
   const { OpenSidebar, OpenSubMenu, CloseSubMenu } = useGlobalContext();
+  const displaySubMenu = (e) => {
+
+    const page = e.target.textContext;
+    const tempBtn = e.target.getBoundingClientRect()
+    const center = (tempBtn.left + tempBtn.right) / 2
+    const bottom = tempBtn.bottom - 3;
+
+    OpenSubMenu(page, { center, bottom })
+
+  }
   return (
     <nav className='nav'>
       <div className='nav-center'>
@@ -14,13 +24,13 @@ const Navbar = () => {
         </div>
         <ul className='nav-links'>
           <li>
-            <button className='link-btn'>Product</button>
+            <button className='link-btn' onMouseOver={displaySubMenu}>Product</button>
           </li>
           <li>
-            <button className='link-btn'>developers</button>
+            <button className='link-btn' onMouseOver={displaySubMenu}>developers</button>
           </li>
           <li>
-            <button className='link-btn'>Company</button>
+            <button className='link-btn' onMouseOver={displaySubMenu}>Company</button>
           </li>
 
         </ul>
