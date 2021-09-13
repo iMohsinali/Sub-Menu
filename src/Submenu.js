@@ -35,8 +35,10 @@ const Submenu = () => {
             const { url, icon, label } = link
             return (
               <a key={index} href={url}>
+
                 {icon}
                 {label}
+
               </a>
             )
           })}

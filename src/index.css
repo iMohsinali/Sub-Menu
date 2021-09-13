@@ -275,7 +275,7 @@ Stripe Styles
     justify-self: center;
   }
   .phone-img {
-    width: 11rem;
+    width: 12rem;
   }
 }
 
@@ -293,7 +293,7 @@ Stripe Styles
     align-self: end;
   }
   .phone-img {
-    width: 12rem;
+    width: 15rem;
   }
 }
 @media screen and (min-width: 1400px) {
