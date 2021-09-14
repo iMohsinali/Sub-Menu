@@ -6,10 +6,14 @@ const AppContext = React.createContext();
 export const AppProvider = ({ children }) => {
     const [isSidebarOpen, setSidebarOpen] = useState(false)
     const [isSubMenuOpen, setSubMenuOpen] = useState(false)
+    const [popup, setpop] = useState(false)
     const [location, setloaction] = useState({})
     const [page, setpage] = useState({ page: '', links: [] });
     const OpenSidebar = () => {
         setSidebarOpen(true)
+    }
+    const ClosePop = () => {
+        setpop(true)
     }
     const CloseSidebar = () => {
         setSidebarOpen(false)
@@ -31,7 +35,9 @@ export const AppProvider = ({ children }) => {
         OpenSidebar,
         CloseSidebar,
         CloseSubMenu,
-        location
+        location,
+        popup,
+        ClosePop
     }}>{children}</AppContext.Provider>
 }
 
